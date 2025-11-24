@@ -157,6 +157,26 @@ h4, .h4 {
   }
 }
 
+@media (max-width: 767px) {
+    
+    /* 1. Target Kontainer Daftar (UL) Anda */
+    /* Ganti .subheading ul dengan selector yang benar jika berbeda */
+    .subheading ul {
+        /* Hapus tata letak horizontal (jika menggunakan Flex/Grid/Column) */
+        display: block !important; 
+        columns: 1 !important; /* Pastikan hanya 1 kolom */
+    }
+
+    /* 2. Target Item Daftar (LI) Anda */
+    .subheading ul li {
+        /* Memastikan setiap item mengambil satu baris penuh */
+        width: 100% !important; 
+        float: none !important; /* Hapus float jika digunakan */
+        padding-right: 0 !important; /* Hapus padding horizontal yang mungkin menyebabkan masalah */
+        margin-bottom: 5px; /* Beri sedikit jarak antar baris */
+    }
+}
+
 h5, .h5 {
   font-size: 1.25rem;
 }
